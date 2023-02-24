@@ -16,7 +16,7 @@ jobs:
           node-version: 16
 
       - name: Build and Deploy on Production
-        run: echo "hello"
+        run: echo "hello" | npm build
 
       - name: Report Status
         if: always()
