@@ -17,7 +17,7 @@ jobs:
 
       - name: Build and Deploy on Production
         run: echo "hello"
-        
+
       - name: get Inputs
         run: echo "${{ toJson(github) }}"
 
@@ -25,6 +25,7 @@ jobs:
         if: always()
         uses: ravsamhq/notify-slack-action@v1
         with:
+          status: ${{ job.status }}
           notification_title: '{workflow} has {status_message}'
           message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>'
           footer: 'Linked to Repo <{repo_url}|{repo}>'
