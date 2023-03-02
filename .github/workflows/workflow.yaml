@@ -19,7 +19,7 @@ jobs:
         run: echo "hello"
 
       - name: get Inputs
-        run: echo "${{ toJson(github) }}"
+        run: echo "${{ job.status }}"
 
       - name: Report Status
         if: always()
