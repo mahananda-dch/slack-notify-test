@@ -25,11 +25,10 @@ jobs:
         if: always()
         with:
           status: ${{ job.status }}
-          notification_title: "{workflow} has {status_message}"
-          message_format: "{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>"
-          footer: "Linked Repo <{repo_url}|{repo}>"
-#          notify_when: "failure"
-          mention_users: "U0160UUNH8S,U0080UUAA9N"
-          mention_users_when: "failure,warnings"
+          # notification_title: "{workflow} has {status_message}"
+          # message_format: "{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>"
+          # footer: "Linked Repo <{repo_url}|{repo}>"
+          # mention_users: "U0160UUNH8S,U0080UUAA9N"
+          # mention_users_when: "failure,warnings"
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
