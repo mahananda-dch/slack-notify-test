@@ -16,7 +16,7 @@ jobs:
           node-version: 16
 
       - name: Build and Deploy on Production
-        run: echo "hell0o" && npm check
+        run: echo "hell0o" 
 
       - name: get Inputs
         run: echo "${{ job.status }}"
@@ -26,8 +26,8 @@ jobs:
         with:
           status: ${{ job.status }}
           notification_title: "{workflow} has {status_message}"
-          # message_format: "{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>"
-          # footer: "Linked Repo <{repo_url}|{repo}>"
+          message_format: "{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>"
+          footer: "Linked Repo <{repo_url}|{repo}>"
           # mention_users: "U0160UUNH8S,U0080UUAA9N"
           # mention_users_when: "failure,warnings"
         env:
