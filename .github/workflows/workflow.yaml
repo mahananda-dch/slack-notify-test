@@ -32,3 +32,5 @@ jobs:
           # mention_users_when: "failure,warnings"
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
+        run: |
+          echo $ACTION_MONITORING_SLACK
